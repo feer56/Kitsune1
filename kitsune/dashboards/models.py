@@ -2,7 +2,7 @@ import logging
 from datetime import date, timedelta
 
 from django.conf import settings
-from django.db import connection
+from django.db import connection, close_old_connections
 from django.db import models
 
 from tower import ugettext_lazy as _lazy
@@ -55,10 +55,15 @@ class WikiDocumentVisits(ModelBase):
             # http://code.djangoproject.com/ticket/9519 is fixed.
             # cls.objects.filter(period=period).delete()
 
+            # Close any existing connections because our load balancer times them
+            # out at 5 minutes.
+            close_old_connections()
+
             # Instead, we use raw SQL!
             cursor = connection.cursor()
             cursor.execute(
-                'DELETE FROM `dashboards_wikidocumentvisits` WHERE `period` = %s',
+                'DELETE FROM `dashboards_wikidocumentvisits`'
+                '    WHERE `period` = %s',
                 [period])
 
             # Now we create them again with fresh data.
