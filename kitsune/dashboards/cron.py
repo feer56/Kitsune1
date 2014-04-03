@@ -17,6 +17,11 @@ from kitsune.wiki.utils import num_active_contributors
 
 @cronjobs.register
 def reload_wiki_traffic_stats():
+    import logging
+    l = logging.getLogger('django.db.backends')
+    l.setLevel(logging.DEBUG)
+    l.addHandler(logging.StreamHandler())
+
     # if settings.STAGE:
     #     print ('Skipped reload_wiki_traffic_stats(). '
     #            'Set settings.STAGE to False to run it for real.')

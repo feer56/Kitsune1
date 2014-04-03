@@ -58,8 +58,7 @@ class WikiDocumentVisits(ModelBase):
             # Instead, we use raw SQL!
             cursor = connection.cursor()
             cursor.execute(
-                'DELETE FROM `dashboards_wikidocumentvisits` '
-                'WHERE `period` = %s',
+                'DELETE FROM `dashboards_wikidocumentvisits` WHERE `period` = %s',
                 [period])
 
             # Now we create them again with fresh data.
