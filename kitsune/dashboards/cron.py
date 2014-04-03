@@ -22,8 +22,9 @@ def reload_wiki_traffic_stats():
     #            'Set settings.STAGE to False to run it for real.')
     #     return
 
-    LAST_7_DAYS = 0
-    for period in [LAST_7_DAYS]: # for period, _ in PERIODS:
+    # LAST_7_DAYS = 0
+    # for period in [LAST_7_DAYS]:
+    for period, _ in PERIODS:
         WikiDocumentVisits.reload_period_from_analytics(
             period, verbose=True)
 
