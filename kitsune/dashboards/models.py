@@ -54,6 +54,7 @@ class WikiDocumentVisits(ModelBase):
             # http://code.djangoproject.com/ticket/9519 is fixed.
             cls.objects.filter(period=period).delete()
             for doc_id, visits in counts.iteritems():
+                print 'Creating WikiDocumentVisit for %s' % doc_id
                 cls.objects.create(document=Document(pk=doc_id), visits=visits,
                                    period=period)
         else:

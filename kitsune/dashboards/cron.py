@@ -17,14 +17,15 @@ from kitsune.wiki.utils import num_active_contributors
 
 @cronjobs.register
 def reload_wiki_traffic_stats():
-    if settings.STAGE:
-        print ('Skipped reload_wiki_traffic_stats(). '
-               'Set settings.STAGE to False to run it for real.')
-        return
+    # if settings.STAGE:
+    #     print ('Skipped reload_wiki_traffic_stats(). '
+    #            'Set settings.STAGE to False to run it for real.')
+    #     return
 
-    for period, _ in PERIODS:
+    LAST_7_DAYS = 0
+    for period in [LAST_7_DAYS]: # for period, _ in PERIODS:
         WikiDocumentVisits.reload_period_from_analytics(
-            period, verbose=settings.DEBUG)
+            period, verbose=True)
 
 
 @cronjobs.register
