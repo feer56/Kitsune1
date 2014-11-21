@@ -432,6 +432,8 @@ def advanced_search(request, template=None):
     # TODO: Figure out how to get rid of 'a' and do it.
     # It basically is used to switch between showing the form or results.
     a = request.GET.get('a', '2')
+    # TODO: This is so the 'a=1' stays in the URL for pagination.
+    r['a'] = 1
 
     # Search default values
     try:
@@ -692,11 +694,10 @@ def advanced_search(request, template=None):
                 ]
             ])
             query = {}
-            # Create match and match_phrase queries for every field
+            # Create a simple_query_search query for every field
             # we want to search.
             for field in query_fields:
-                for query_type in ['match', 'match_phrase']:
-                    query['%s__%s' % (field, query_type)] = cleaned_q
+                query['%s__sqs' % field] = cleaned_q
 
             # Transform the query to use locale aware analyzers.
             query = es_utils.es_query_with_analyzer(query, language)

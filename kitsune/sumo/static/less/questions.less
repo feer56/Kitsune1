@@ -1018,32 +1018,76 @@ h2 {
     padding: 0;
   }
 
-  ul {
-    list-style: none;
-    margin: 10px 0;
-    padding: 0;
+  h2 {
+    margin-bottom: 0;
 
-    input {
-      float: left;
-      width: 300px;
+    + h4 {
+      margin-bottom: 10px;
+      margin-top: 5px;
     }
+  }
 
-    label {
-      float: left;
-      padding-right: 12px;
-      text-align: right;
-      width: 130px;
-    }
+  label {
+    font-size: 12px;
+    font-weight: bold;
+  }
 
-    li {
-      display: block;
+  form {
+    ul {
+      list-style: none;
       margin: 10px 0;
+      padding: 0;
+
+      > li {
+        min-height: 100px;
+      }
+
+      input {
+        .box-sizing(border-box);
+        padding: 10px;
+        width: 45%;
+      }
+
+      label {
+        display: block;
+        margin: 10px 0;
+      }
     }
+  }
+
+  h2 {
+    font-size: 26px;
   }
 
   .submit {
     .btn {
-      margin-left: 141px;
+      .box-sizing(border-box);
+      height: 45px;
+      margin-top: 20px;
+      width: 45%;
+    }
+  }
+
+  .validation-label {
+    .box-sizing(border-box);
+    color: #c00;
+    display: none;
+    float: right;
+    margin-top: 10px;
+    padding-left: 16px;
+    width: 55%;
+
+    &:before {
+      content: '\2718'; /* X mark */
+      margin-right: 10px;
+    }
+
+    &.valid {
+      color: #090;
+
+      &:before {
+        content: '\2713'; /* Check mark */
+      }
     }
   }
 }
@@ -1060,12 +1104,10 @@ h2 {
   margin-top: 10px;
 }
 
-#username-rules, #password-rules {
-  font-size: 85%;
-  margin: 5px 0 0 140px;
-  text-align: left;
-  width: 300px;
-  clear: both;
+#username-rules,
+#password-rules {
+  font-size: 12px;
+  width: 45%;
 }
 
 #product-picker {
