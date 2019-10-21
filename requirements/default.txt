@@ -323,7 +323,7 @@ https://github.com/ryanmcgrath/twython/archive/4327ff30dffb1b17945b08655daf2b169
 urllib3==1.8
 
 # sha256: _2OLROrKgcmhyMSSuVfBuNG0SyFH5QIWNV_5yZ2qhjc
-Werkzeug==0.5.1
+Werkzeug==0.15.3
 
 # zendesk: master
 # sha256: qZay1j0xjnxeqf9KSApA23lDIepStzP_bG2lfvszujs
