@@ -172,7 +172,7 @@ google-api-python-client==1.0
 https://github.com/html5lib/html5lib-python/archive/f5855f3d0ad6d4202e2b5d02626d85178ff6443a.tar.gz#egg=html5lib-python
 
 # sha256: OeqMam2fWVwXehYTT8SamQrY04J1jL9GnIZZZi8vUas
-httplib2==0.9
+httplib2==0.18.0
 
 # jingo: tags/v0.6.1
 # sha256: YSPU9TzrM590ox_yUwL-1QBGuOEFuYihlhhLZVZ9Rb8
