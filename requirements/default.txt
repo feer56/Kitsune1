@@ -183,7 +183,7 @@ https://github.com/jbalogh/jingo/archive/8a6fe63ded02970888c27fd527a3c5f9e306111
 https://github.com/jsocol/jingo-minify/archive/51c158a18e6c5ff7c6fd030ffa4cba51117893b5.tar.gz#egg=jingo-minify
 
 # sha256: GQQPAbOp2MY-TVeTb3hxCQgZm2k3CrRKD3QH3YkfAZs
-Jinja2==2.5.2
+Jinja2==2.11.3
 
 # kombu: tags/v2.5.15
 # sha256: q7LQnb_YEdLVBSbXyqK6p5foIFShJ_v0jeL-r0fPyb8
