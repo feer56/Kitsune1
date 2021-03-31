@@ -196,7 +196,7 @@ logilab-astng==0.20.1
 logilab-common==0.50.3
 
 # sha256: f9NuSlY2DNXXMZ41ewSpDixrg26iIMiPlFHDAK4zzF4
-lxml==2.2.6
+lxml==4.6.3
 
 # sha256: U0_2_u_hzQOYT0ROZBWqzHnAqF87ho7EGi_VADAEwx4
 mimeparse==0.1.3
