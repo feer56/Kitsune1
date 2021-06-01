@@ -320,7 +320,7 @@ translate-toolkit==1.6.0
 https://github.com/ryanmcgrath/twython/archive/4327ff30dffb1b17945b08655daf2b16998a239b.tar.gz#egg=twython
 
 # sha256: Gon6G0PSd8-t8ijMkLnHXyVIGOo6Gqt7_7AiPLt7sV0
-urllib3==1.8
+urllib3==1.26.5
 
 # sha256: _2OLROrKgcmhyMSSuVfBuNG0SyFH5QIWNV_5yZ2qhjc
 Werkzeug==0.5.1
