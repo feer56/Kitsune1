@@ -5,7 +5,7 @@ amqp==1.4.2
 anyjson==0.3.1
 
 # sha256: SjoIXs8fzSc2VzU4_6EU8fQzGzu73Wk4Hm4XLEnJdQ8
-Babel==0.9.6
+Babel==2.9.1
 
 # billiard: tags/v2.7.3.34
 # sha256: YKE9uzfN1UL1JUZXDT451i6erJQVPRDdfCT_poTAVy0
