@@ -218,7 +218,7 @@ https://github.com/idan/oauthlib/archive/8a7b279e44efacccab7eee6bb60143120c45eca
 ordereddict==1.1
 
 # sha256: KGXGizpWOEZrGDe_SmfER-DP33RjMJoGiq0OkKoD9Yo
-Pillow==2.4.0
+Pillow==9.0.0
 
 # sha256: eygeXKeZ-QYb8Cny6RHpnfSDoaAu8v-q9z_oAiLyav8
 polib==1.0.3
